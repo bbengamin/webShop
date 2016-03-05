@@ -1,0 +1,33 @@
+	<!-- Footer -->
+		<div id="footer">
+			<p class="left">
+				<a href="#">Home</a> <span>|</span> <a href="#">Support</a> <span>|</span>
+				<a href="#">My Account</a> <span>|</span> <a href="#">The Store</a>
+				<span>|</span> <a href="#">Contact</a>
+			</p>
+			<p class="right">&copy; 2015 EPAM Systems. Design by Ihor
+				Bohdanov</p>
+		</div>
+		<!-- End Footer -->
+</body>
+<script>
+$("#login-btn").click(function(){
+	/* $("#login-popup").css("top", "0"); */
+	$("#login-popup").animate({top:0}, 800, function() {
+	    //callback
+	});
+});
+$("body").click(function(){
+	$("#login-popup").animate({top:-285}, 800, function() {
+	});
+});
+// Prevent events from getting pass .popup
+$("#login-popup").click(function(e){
+  e.stopPropagation();
+});
+// Prevent events from getting pass .popup
+$("#login-btn").click(function(e){
+  e.stopPropagation();
+});
+</script>
+</html>
